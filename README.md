@@ -33,7 +33,7 @@ Save the results in `aggressive_tweets_candidates.json`.
 ```bash
 search_tweets.py \
   --max-tweets 10 \
-  --query "asshole OR bastard OR cretin OR idiot OR jerk OR retard OR stupid OR twat" \
+  --query "(asshole OR bastard OR cretin OR idiot OR jerk OR retard OR stupid OR twat) lang:en" \
   --filename-prefix aggressive_tweets_candidates \
   --print-stream
 ```
