@@ -28,6 +28,8 @@ search_tweets_api:
 
 ## Consuming
 
+Save the results in `aggressive_tweets_candidates.json`.
+
 ```bash
 search_tweets.py \
   --max-tweets 10 \
