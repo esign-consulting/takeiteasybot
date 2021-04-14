@@ -20,7 +20,7 @@ Place in `~/.twitter_keys.yaml` with the content like below:
 
 ```yml
 ---
-search_tweets_api:
+search_tweets_v2:
   endpoint:  https://api.twitter.com/2/tweets/search/recent
   consumer_key: <CONSUMER_KEY>
   consumer_secret: <CONSUMER_SECRET>
@@ -39,3 +39,5 @@ search_tweets.py \
 ```
 
 More about queries in [here](https://developer.twitter.com/en/docs/twitter-api/tweets/filtered-stream/integrate/build-a-rule).
+
+Maximum tweets consumption per month: 500.000 tweets (for free). Frequency intended for consuming: 10 tweets per minute.
