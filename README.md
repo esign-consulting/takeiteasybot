@@ -12,7 +12,7 @@ To prepare your local Python environment, execute:
 
 Or if you are going to use Docker, build the image:
 
-`docker build -t takeiteasybot-consumer .`
+`docker build -t esignbr/searchtweets-v2 .`
 
 ## CLI
 
@@ -46,6 +46,16 @@ Save the results in `aggressive_tweets_candidates.json`.
 
 ```bash
 search_tweets.py \
+  --max-tweets 10 \
+  --query "(asshole OR bastard OR cretin OR idiot OR jerk OR retard OR stupid OR twat) lang:en" \
+  --filename-prefix aggressive_tweets_candidates \
+  --print-stream
+```
+
+Or
+
+```bash
+docker run --rm --env-file .env esignbr/searchtweets-v2 \
   --max-tweets 10 \
   --query "(asshole OR bastard OR cretin OR idiot OR jerk OR retard OR stupid OR twat) lang:en" \
   --filename-prefix aggressive_tweets_candidates \
