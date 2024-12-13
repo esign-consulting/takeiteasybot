@@ -1,2 +1,3 @@
 env/
+.env
 aggressive_tweets_candidates.json

@@ -1,0 +1,5 @@
+---
+search_tweets_v2:
+  endpoint: ${SEARCHTWEETS_ENDPOINT} 
+  consumer_key: ${SEARCHTWEETS_CONSUMER_KEY}
+  consumer_secret: ${SEARCHTWEETS_CONSUMER_SECRET}

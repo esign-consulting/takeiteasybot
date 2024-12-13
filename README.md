@@ -6,7 +6,13 @@ Based on [searchtweets-v2](https://github.com/twitterdev/search-tweets-python/tr
 
 ## Setup
 
+To prepare your local Python environment, execute:
+
 `python3 -m venv env && source env/bin/activate && pip install -r requirements.txt`
+
+Or if you are going to use Docker, build the image:
+
+`docker build -t takeiteasybot-consumer .`
 
 ## CLI
 
@@ -16,7 +22,7 @@ Command line tool help:
 
 ## Credentials
 
-Place in `~/.twitter_keys.yaml` with the content like below:
+Place in `~/.twitter_keys.yaml` the content like below:
 
 ```yml
 ---
@@ -24,6 +30,14 @@ search_tweets_v2:
   endpoint:  https://api.twitter.com/2/tweets/search/recent
   consumer_key: <CONSUMER_KEY>
   consumer_secret: <CONSUMER_SECRET>
+```
+
+Alternatively, if Docker will be used to run the consumer, place in `.env` the content like below:
+
+```env
+SEARCHTWEETS_ENDPOINT=https://api.twitter.com/2/tweets/search/recent
+SEARCHTWEETS_CONSUMER_KEY=<CONSUMER_KEY>
+SEARCHTWEETS_CONSUMER_SECRET=<CONSUMER_SECRET>
 ```
 
 ## Consuming
